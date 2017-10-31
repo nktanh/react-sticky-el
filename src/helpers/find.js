@@ -6,7 +6,7 @@ if (typeof document !== 'undefined') {
 }
 
 var matchesMethodName = (() => {
-  if (typeof document !== 'undefined') {
+  if (typeof document !== 'undefined' && document.body !== null) {
     const body = document.body;
     return typeof(body.matches) === 'function' ? 'matches' :
       typeof(body.webkitMatchesSelector) === 'function' ? 'webkitMatchesSelector': //webkit
